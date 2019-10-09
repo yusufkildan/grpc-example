@@ -14,6 +14,10 @@
 		1204A9F2234DE6930063FCA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1204A9F1234DE6930063FCA4 /* Assets.xcassets */; };
 		1204A9F5234DE6930063FCA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1204A9F3234DE6930063FCA4 /* LaunchScreen.storyboard */; };
 		1204A9FD234DE9480063FCA4 /* Notes.proto in Sources */ = {isa = PBXBuildFile; fileRef = 1204A9FC234DE9480063FCA4 /* Notes.proto */; };
+		1256945C234DF3150020F5C3 /* Notes.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1256945A234DF3150020F5C3 /* Notes.grpc.swift */; };
+		1256945D234DF3150020F5C3 /* Notes.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1256945B234DF3150020F5C3 /* Notes.pb.swift */; };
+		1256945F234DF3300020F5C3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1256945E234DF3300020F5C3 /* Service.swift */; };
+		12569461234DF57C0020F5C3 /* Note+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12569460234DF57C0020F5C3 /* Note+Extensions.swift */; };
 		8F51FEBD4DAF3D3A657FD37C /* Pods_grpc_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33BA3F83D35F6FB6B22172AE /* Pods_grpc_example.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		1204A9F4234DE6930063FCA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1204A9F6234DE6930063FCA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1204A9FC234DE9480063FCA4 /* Notes.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = Notes.proto; sourceTree = "<group>"; };
+		1256945A234DF3150020F5C3 /* Notes.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.grpc.swift; sourceTree = "<group>"; };
+		1256945B234DF3150020F5C3 /* Notes.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.pb.swift; sourceTree = "<group>"; };
+		1256945E234DF3300020F5C3 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		12569460234DF57C0020F5C3 /* Note+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+Extensions.swift"; sourceTree = "<group>"; };
 		33BA3F83D35F6FB6B22172AE /* Pods_grpc_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grpc_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45DAE5541E7956B22BA3BA03 /* Pods-grpc-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grpc-example.debug.xcconfig"; path = "Target Support Files/Pods-grpc-example/Pods-grpc-example.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC022063393566F559CF442 /* Pods-grpc-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grpc-example.release.xcconfig"; path = "Target Support Files/Pods-grpc-example/Pods-grpc-example.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,14 +73,18 @@
 		1204A9E7234DE6920063FCA4 /* grpc-example */ = {
 			isa = PBXGroup;
 			children = (
-				1204A9E8234DE6920063FCA4 /* AppDelegate.swift */,
-				1204A9EA234DE6920063FCA4 /* SceneDelegate.swift */,
+				1204A9FC234DE9480063FCA4 /* Notes.proto */,
 				1204A9EC234DE6920063FCA4 /* NoteListTableViewController.swift */,
+				12569460234DF57C0020F5C3 /* Note+Extensions.swift */,
+				1256945A234DF3150020F5C3 /* Notes.grpc.swift */,
+				1256945B234DF3150020F5C3 /* Notes.pb.swift */,
+				1204A9E8234DE6920063FCA4 /* AppDelegate.swift */,
+				1256945E234DF3300020F5C3 /* Service.swift */,
+				1204A9EA234DE6920063FCA4 /* SceneDelegate.swift */,
 				1204A9EE234DE6920063FCA4 /* Main.storyboard */,
 				1204A9F1234DE6930063FCA4 /* Assets.xcassets */,
 				1204A9F3234DE6930063FCA4 /* LaunchScreen.storyboard */,
 				1204A9F6234DE6930063FCA4 /* Info.plist */,
-				1204A9FC234DE9480063FCA4 /* Notes.proto */,
 			);
 			path = "grpc-example";
 			sourceTree = "<group>";
@@ -210,8 +222,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1204A9ED234DE6920063FCA4 /* NoteListTableViewController.swift in Sources */,
+				12569461234DF57C0020F5C3 /* Note+Extensions.swift in Sources */,
+				1256945F234DF3300020F5C3 /* Service.swift in Sources */,
 				1204A9E9234DE6920063FCA4 /* AppDelegate.swift in Sources */,
 				1204A9FD234DE9480063FCA4 /* Notes.proto in Sources */,
+				1256945C234DF3150020F5C3 /* Notes.grpc.swift in Sources */,
+				1256945D234DF3150020F5C3 /* Notes.pb.swift in Sources */,
 				1204A9EB234DE6920063FCA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z72KFC34Z8;
 				INFOPLIST_FILE = "grpc-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -376,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z72KFC34Z8;
 				INFOPLIST_FILE = "grpc-example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
